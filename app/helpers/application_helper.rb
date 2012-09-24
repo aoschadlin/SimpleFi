@@ -1,10 +1,10 @@
 module ApplicationHelper
 
-	def full_title(pageTitle)
-		if pageTitle.nil?
+	def full_title(pageDescription)
+		if pageDescription.nil?
 			return "SimpleFi"
 		else
-			return "SimpleFi | #{pageTitle}"
+			return "SimpleFi | #{pageDescription}"
 		end
 	end
 end

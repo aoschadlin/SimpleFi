@@ -1,11 +1,12 @@
 require 'spec_helper'
 
 describe "SiteFlows" do
-  describe "GET /site_flows" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get site_flows_path
-      response.status.should be(200)
-    end
+  subject { page }
+
+  describe "About page" do
+    before {visit about_path}
+
+    it { should have_selector('h1', text: 'Team') }
+    it { should have_selector('title', text: "About") }
   end
 end

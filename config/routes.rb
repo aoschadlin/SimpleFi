@@ -1,4 +1,15 @@
 SimpleFi::Application.routes.draw do
+
+  get "users/new"
+
+  match 'signup' => 'users#new'
+
+  match 'about' => 'pages#about'
+  match 'contact' => 'pages#contact'
+  match 'lesson' => 'pages#lesson'
+
+  root :to => 'pages#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
